@@ -113,7 +113,8 @@
           <div class="form-row">
             <div class="form-field">
               <label for="contact-phone">Phone Number</label>
-              <input id="contact-phone" name="phone" type="tel" autocomplete="tel">
+              <input id="contact-phone" name="phone" type="tel" autocomplete="tel" required>
+              <span class="field-error">Please enter your phone number.</span>
             </div>
             <div class="form-field">
               <label for="contact-practice">Practice / Organization</label>
@@ -143,7 +144,11 @@
             <input type="checkbox" id="contact-consent" required>
             <span>I agree to be contacted by Crestanex regarding this enquiry.</span>
           </label>
-          <button class="btn btn-primary btn-shine contact-submit" type="submit">Send Message <span>→</span></button>
+          <button class="btn btn-primary btn-shine contact-submit" type="submit" id="contact-submit-btn">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-icon" aria-hidden="true">→</span>
+            <span class="btn-loader" aria-hidden="true"></span>
+          </button>
           <p class="form-status" id="contact-form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
